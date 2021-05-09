@@ -16,8 +16,8 @@ function Profile () {
       const data = await Auth.currentUserPoolUser()
       const userInfo = { 
         username: data.username, 
-        email: data.email,
-        ...data.attibutes, 
+        email: data.attributes.email,
+        phone_number: data.attributes.phone_number
       }
       setUser(userInfo)
     } catch (err) {
